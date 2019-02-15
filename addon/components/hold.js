@@ -9,15 +9,5 @@ export default Component.extend({
     style: htmlSafe('display: block; padding-left: 0px;'),
     tabindex: '-1',
     role: 'dialog',
-    attributeBindings: ['style', 'tabindex', 'role'],
-    click(event) {
-        if (typeof this.$ !== 'undefined') {
-            const target = event.target;
-            const thisEl = this.$()[0];
-
-            if (target === thisEl || this.$(target).parent()[0] === thisEl) {
-                this.get('current').close();
-            }
-        }
-    }
+    attributeBindings: ['style', 'tabindex', 'role']
 });
